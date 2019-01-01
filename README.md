@@ -40,6 +40,8 @@
 ssh -i /path/to/ec2-confluence.pem ubuntu@<IP ADDRESS>
 ```
 
+User = ec2-user
+
 13. Run `sudo yum update` after your initial login, and update the software
 1. Create a swap file:
 
@@ -61,7 +63,7 @@ Reconnect to the machine via ssh using the command from step 12. The instance ma
 
 ## Download and install Confluence
 
-During this tutorial, the latest version of Confluence is 6.13.0 and is available at `https://www.atlassian.com/software/confluence/downloads/binary/atlassian-confluence-5.10.0-x64.bin`. To find the URL for the latest version of Confluence, see the download page at `https://www.atlassian.com/software/confluence/download`, select Linux, and copy the `Trial download` destination link for the 64bit installer.
+During this tutorial, the latest version of Confluence is 6.13.0 and is available at `https://www.atlassian.com/software/confluence/downloads/binary/atlassian-confluence-6.13.0-x64.bin`. To find the URL for the latest version of Confluence, see the download page at `https://www.atlassian.com/software/confluence/download`, select Linux, and copy the `Trial download` destination link for the 64bit installer.
 
 16. Download Confluence to a downloads directory, and execute the installer
 
@@ -74,12 +76,19 @@ During this tutorial, the latest version of Confluence is 6.13.0 and is availabl
 
 17. Run through the Confluence setup wizard, default/express install is fine
 1. Add the hostname to the hosts file so Confluence can reliably configure the local database, followed by a last reboot of the machine
+
 ```sh
-[ec2-user@ip ~]$ sudo echo `cat /etc/hosts` $HOSTNAME > /etc/hosts
+[ec2-user@ip ~]$ cd /etc
+[ec2-user@ip ~]$ sudo nano hosts
+
+1. Add the variable $HOSTNAME to the file
+
 [ec2-user@ip ~]$ sudo reboot now
 ```
 
-19. Once the machine has rebooted, you will be able to start configuring COnfluence via the web based setup wizard by via the IP address you got at step 13 using `http://<IP ADDRESS>:8090/`. The intial setup of Confluence can take a long time - this process can take well over 10 minutes. Be patient and allow it to complete loading.
+19. Once the machine has rebooted, you will be able to start configuring Confluence via the web based setup wizard by via the IPv4 address on  the AWS Consoles using `http://<IP ADDRESS>:8090/`.
+
+The intial setup of Confluence can take a long time - this process can take well over 10 minutes. Be patient and allow it to complete loading.
 
 ## Notes
 
