@@ -6,7 +6,8 @@
 1. Launch the AWS EC2 Management Console at https://console.aws.amazon.com/ec2/v2/home
 1. Click on `Instances`
 1. Click on `Launch Instance`
-1. Click on `Select` for the Amazon Linux AMI SSD Volume Type (ami-a4827dc9 as of writing)
+1. Click on `Select` for the Amazon Linux AMI SSD Volume Type (Select
+64-bit (x86) Amazon Linux AMI 2018.03.0 (HVM), SSD Volume Type - ami-01e24be29428c15b2)
 1. On the `Instance Type` screen, select the `t2.micro` type and click `Next: Configure Instance Details`
 
 ## Security Groups
@@ -39,7 +40,7 @@
 ssh -i /path/to/ec2-confluence.pem ubuntu@<IP ADDRESS>
 ```
 
-13. Run `sudo yum update` after your initial login
+13. Run `sudo yum update` after your initial login, and update the software
 1. Create a swap file:
 
 ```sh
