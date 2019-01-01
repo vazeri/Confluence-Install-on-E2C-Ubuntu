@@ -60,13 +60,13 @@ Reconnect to the machine via ssh using the command from step 12. The instance ma
 
 ## Download and install Confluence
 
-During this tutorial, the latest version of Confluence is 5.10.0 and is available at `https://www.atlassian.com/software/confluence/downloads/binary/atlassian-confluence-5.10.0-x64.bin`. To find the URL for the latest version of Confluence, see the download page at `https://www.atlassian.com/software/confluence/download`, select Linux, and copy the `Trial download` destination link for the 64bit installer.
+During this tutorial, the latest version of Confluence is 6.13.0 and is available at `https://www.atlassian.com/software/confluence/downloads/binary/atlassian-confluence-5.10.0-x64.bin`. To find the URL for the latest version of Confluence, see the download page at `https://www.atlassian.com/software/confluence/download`, select Linux, and copy the `Trial download` destination link for the 64bit installer.
 
 16. Download Confluence to a downloads directory, and execute the installer
 
 ```sh
 [ec2-user@ip ~]$ mkdir downloads; cd downloads
-[ec2-user@ip ~]$ wget -O confluence.bin https://www.atlassian.com/software/confluence/downloads/binary/atlassian-confluence-5.10.0-x64.bin
+[ec2-user@ip ~]$ wget -O confluence.bin https://www.atlassian.com/software/confluence/downloads/binary/atlassian-confluence-6.13.0-x64.bin
 [ec2-user@ip ~]$ chmod u+x confluence.bin
 [ec2-user@ip ~]$ sudo ./confluence.bin
 ```
