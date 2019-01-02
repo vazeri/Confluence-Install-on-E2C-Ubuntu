@@ -1,0 +1,28 @@
+sudo yum install postgresql-server postgresql-contrib
+
+sudo yum update
+
+sudo yum install vim wget
+
+user GoatZero  
+pass M*************2 
+
+Configurar puertos para postgresql
+
+Crear RDS 
+
+http://18.236.133.5:8090/
+
+
+We recommend setting the maximum running user processes and number of opened files permanently, the way you do this is operating system specific. In most Linux distributions this can be set temporarily using ulimit or permanently using limits.conf (e.g. Ubuntu, RedHat) by adding the following:
+
+confluence      soft   nofile  4096
+confluence      hard   nofile  8192
+confluence      soft   nproc   4096        
+confluence      hard   nproc   8192
+
+http://ec2-18-236-133-5.us-west-2.compute.amazonaws.com:8090/login.action?os_destination=%2Findex.action&permissionViolation=true
+
+goat 
+GoatZero
+
