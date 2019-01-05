@@ -1,6 +1,10 @@
 # Installing Confluence on a EC2 t2.micro Free Tier Instance
 
-## Create the EC2 instance
+## Requirements
+
+Being Confluence a java application at least 6 gb of ram are recomended, you can get away by using 1 core, but using the 1 GB of RAM included with the free tier t2.micro might really slow down the instance, but it will slow down the response times of the instance, with this out of the way, let us begin 
+
+## Create the instance
 
 1. Create an AWS account at http://aws.amazon.com/
 1. Launch the AWS EC2 Management Console at https://console.aws.amazon.com/ec2/v2/home
