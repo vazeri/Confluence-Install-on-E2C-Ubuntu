@@ -1,4 +1,4 @@
-# How to install Confluence on a EC2 t2.micro Free Tier Instance
+# Installing Confluence on a EC2 t2.micro Free Tier Instance
 
 ## Create the EC2 instance
 
